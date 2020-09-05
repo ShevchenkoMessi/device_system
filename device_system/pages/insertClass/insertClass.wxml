@@ -1,0 +1,16 @@
+<!--pages/insertClass/insertClass.wxml-->
+<view class="devc">
+	<view class="v1">
+		<form bindsubmit="formSubmit" bindreset="formReset">
+			<view class="v11">
+				<view><text>名称:  </text></view>
+				<view class="v12">
+					<input type="text" class="input-text" name="className" />
+				</view>
+			</view>
+			<view class="v2">
+				<button form-type="submit" style="width:80%" type="primary">添加设备</button>
+			</view>
+		</form>
+	</view>
+</view>

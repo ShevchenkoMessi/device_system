@@ -1,0 +1,46 @@
+<!--pages/information platform/information platform.wxml-->
+
+<view class="con">
+	<view class="hang1">
+		<view wx:for="{{users.student}}" wx:key="index">
+			<button bindtap="getDevice" data-userNo="{{item}}" type="primary"><text class="button_font">{{item.stuName}}</text></button>
+		</view>
+		<view wx:for="{{users.teacher}}" wx:key="index">
+			<button style="background-color:skyblue;" bindtap="getDevice" data-userNo="{{item}}"><text class="button_font">{{item.teacherName}}</text></button>
+		</view>
+		<view wx:for="{{users.worker}}" wx:key="index">
+			<button style="background-color:orange;" bindtap="getDevice" data-userNo="{{item}}"><text class="button_font">{{item.workerName}}</text></button>
+		</view>
+		<view wx:if="{{identity}}">
+			<button bindtap="insertUser" type="primary" plain="{{true}}">+</button>
+		</view>
+	</view>
+
+	<view class="hang2">
+		<view class="dev1">
+			<view class="dev11">
+				<view class="bian"><text class="font">设备</text></view>
+				<view class="bian"><text class="font">编号</text></view>
+				<view class="bian"><text class="font">还期</text></view>
+			</view>
+			<view wx:for="{{devices}}" wx:key="index">
+				<view class="dev12">
+					<view class="bian"><text>{{item.deviceName}}</text></view>
+					<view class="bian"><text>{{item.deviceNo}}</text></view>
+					<view class="bian"><text>{{item.hDate}}</text></view>
+				</view>
+			</view>
+		</view>
+		<view class="dev2">
+			<view wx:if="{{user.userId=='学生' && identity}}" class="xin2">
+				<button bindtap="changeIdentify" type="primary">设为管理员</button>
+			</view>
+			<view wx:if="{{user.userId=='老师' && identity}}" class="xin2">
+				<button bindtap="changeIdentify" style="background-color:skyblue">移除管理员</button>
+			</view>
+			<view wx:if="{{((user.userId=='老师')||(user.userId=='学生')) && identity}}" class="xin2">
+				<button bindtap="deleteUser" type="warn">移除此人</button>
+			</view>
+		</view>
+	</view>
+</view>

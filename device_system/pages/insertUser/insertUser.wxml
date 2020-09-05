@@ -1,0 +1,40 @@
+<!--pages/insertClass/insertClass.wxml-->
+<view class="devc">
+	<view class="v1">
+		<form bindsubmit="formSubmit" bindreset="formReset">
+			<view class="v11">
+				<view><text>学号:</text></view>
+				<view class="v12">
+					<input type="text" class="input-text" name="userNo" />
+				</view>
+			</view>
+			<view class="v11">
+				<view><text>姓名:</text></view>
+				<view class="v12">
+					<input type="text" class="input-text" name="userName" />
+				</view>
+			</view>
+			<view class="v11">
+				<view><text>电话:</text></view>
+				<view class="v12">
+					<input type="text" class="input-text" name="userTel" />
+				</view>
+			</view>
+			<view class="v11">
+				<view><text>邮箱:</text></view>
+				<view class="v12">
+					<input type="text" class="input-text" name="userEmail" />
+				</view>
+			</view>
+			<view class="v11">
+				<view><text>密码:</text></view>
+				<view class="v12">
+					<input password="{{true}}" type="text" class="input-text" name="userPasswd" />
+				</view>
+			</view>
+			<view class="v2">
+				<button form-type="submit" style="width:80%" type="primary">提交</button>
+			</view>
+		</form>
+	</view>
+</view>

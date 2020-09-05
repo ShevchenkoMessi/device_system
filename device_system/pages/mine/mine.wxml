@@ -1,0 +1,27 @@
+<!--mine.wxml-->
+<!--主页面设计  -->
+<view class="con">
+	<view class="hang1">
+			<view class="dev">
+				<text>名称：{{device.deviceName}}</text>
+			</view>
+			<view class="dev">
+				<text>编号：{{device.deviceNo}}</text>
+			</view>
+			<view class="dev">
+				<text>使用人：{{device.userNo}}</text>
+			</view>
+			<view class="dev">
+				<text>借期：{{device.jDate}}</text>
+			</view>
+			<view class="dev">
+				<text>还期：{{device.hDate}}</text>
+			</view>
+	</view>
+  
+  <view class="hang2">
+    <view class="button"><button disabled="{{ifBorrow}}" bindtap="borrow" style="background-color:lightgreen">租借</button></view>
+    <view class="button"><button disabled="{{!ifBorrow}}" bindtap="repay" style="background-color:skyblue">归还</button></view>
+    <view wx:if="{{identity}}" class="button"><button bindtap="deleteDevice" style="background-color:orangered">删除</button></view>
+	</view>
+</view>

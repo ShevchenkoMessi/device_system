@@ -1,0 +1,29 @@
+<!--pages/home/home.wxml-->
+<view class="c01">
+	<view class="hang1">
+		<view wx:for="{{classes}}" wx:key="classId">
+			<button type="primary" bindtap="getDevice" data-value="{{item}}" plain="{{false}}"><text class="font">{{item.className}}</text></button>
+		</view>
+		<view wx:if="{{identity}}">
+			<button bindtap="insertClass" type="primary" plain="{{true}}">+</button>
+		</view>
+	</view>
+
+	<view class="hang2">
+		<view class="hang">
+			<view class="hang22">
+				<view wx:for="{{devices}}" wx:key="id">
+					<view class="dev"><button bindtap="go_mine" data-device="{{item}}" class="color">{{item.deviceNo}}</button></view>
+				</view>
+				<view wx:if="{{devices!=null && identity}}" class="dev">
+					<button bindtap="insertDevice" data-device="{{item}}" plain="{{true}}">+</button>
+				</view>
+			</view>
+		</view>
+		<view class="hang3">
+			<view wx:if="{{devices!=null && identity}}">
+				<button type="warn" bindtap="deleteDevice" style="width:70%,height:40%"><text style="font-size:small">删除{{deviceClass.className}}</text></button>
+			</view>
+		</view>
+	</view>
+</view>

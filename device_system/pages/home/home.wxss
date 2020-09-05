@@ -1,0 +1,52 @@
+page{
+  height: 100%;
+}
+.c01{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100%;
+}
+.hang1{
+  width: 30%;
+  border-right:1px solid black;
+}
+.hang2{
+  width: 69%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+.hang22{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+.hang{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 85%;
+}
+.hang3{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.dev{
+  width: 140rpx;
+  height: 140rpx;  
+  margin: 10rpx;
+}
+.color{
+  background-color: lightgreen;
+}
+.font{
+  font-size: small;
+}

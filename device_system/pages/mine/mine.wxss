@@ -1,0 +1,28 @@
+/**index.wxss**/
+page{
+  height: 100%;
+}
+.con{
+  height: 100%;
+}
+.hang1{
+  height: 40%;
+  width: 100%;
+}
+.hang2{
+  display: flex;
+  justify-content: center;
+}
+.dev{
+  margin: 20rpx;
+  padding-left: 60rpx;
+  font-size: large;
+}
+.button{
+  margin: 30rpx;
+}
+.form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

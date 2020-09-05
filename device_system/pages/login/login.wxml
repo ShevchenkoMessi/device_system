@@ -1,0 +1,58 @@
+<view id="adduser">
+<block wx:if="{{!ifLogin}}">
+	<view class="register">
+		<image class="img_style" src="../images/个人中心.png"></image>
+	</view>
+	<form bindsubmit="formSubmit" bindreset="formReset">
+		<view class="section">
+			<view class="section__title"><text>账号 :  </text></view>
+			<view class='form-group'>
+				<input type="text" class="input-text" name="userNo" />
+			</view>
+		</view>
+
+		<view class="section">
+			<view class="section__title">密码 :</view>
+			<view class='form-group'>
+				<input password="{{true}}" type="text" class="input-text" name="password" />
+			</view>
+		</view>
+
+		<view class="section">
+			<view>
+				<radio-group name="role">
+					<label style="float:right">
+						<radio checked="{{ifCheck}}" bindtap="converse" value="register" />管理员</label>
+				</radio-group>
+			</view>
+		</view>
+
+		<view class="section btn-area">
+			<button formType="submit" class="button_submit">提交</button>
+		</view>
+		<!-- <view class="text-center">
+			<navigator url="/pages/password_get/password_get" hover-class="navigator-hover">忘记密码？？ </navigator>                    
+		</view> -->
+	</form>
+</block>
+
+<block wx:if="{{ifLogin}}">
+	<view class='color'>
+			<view class="desc">
+				<view class="userImg">
+					<open-data type="userAvatarUrl"></open-data>
+				</view>
+				{{personName}}
+			</view>
+	</view>
+	<view class="desc">
+		<view>
+			<button bindtap="update_passwd" style="background-color:lightgreen">修改密码</button>
+		</view>
+		<view style=""></view>
+		<view>
+			<button bindtap="login_out" style="background-color:lightblue">退出登录</button>
+		</view>
+	</view>
+</block>
+</view>
